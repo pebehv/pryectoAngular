@@ -26,7 +26,7 @@ export class MascotasService {
   getMascotas(): Observable<Mascota[]> {
     console.log("mascotas")
     return this.http.get<Mascota[]>(`${this.baseUrl}/getAll.php`);
-  }/*
+  }
 
   getMascota(id: string | number) {
     return this.http.get(`${this.baseUrl}/get.php?idMascota=${id}`);
@@ -42,5 +42,5 @@ export class MascotasService {
 
   updateMascota(mascota: Mascota) {
     return this.http.put(`${this.baseUrl}/update.php`, mascota);
-  }*/
+  }
 }

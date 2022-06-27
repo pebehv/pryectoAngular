@@ -1,0 +1,15 @@
+
+<div id ="alert" class="alert  alert-dismissible fade show" role="alert">
+   <p> {{data}} </p> 
+   <mat-dialog-actions>
+        <button mat-button  type="button" class=" btn btn-outline-dark" data-dismiss="alert" (click)="close()">
+            <span aria-hidden="true">No</span>
+        </button>
+        <button mat-button  type="button" class=" btn btn-outline-secondary" data-dismiss="alert" style="margin-left: 10px;" (click)="delete()">
+            <span >Si</span>
+        </button>
+   </mat-dialog-actions>
+    
+</div>
+
+

@@ -7,6 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
+import { ComponentModule } from './component/component/component.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +23,13 @@ import { CommonModule } from '@angular/common';
     HttpClientModule, 
     MatDialogModule,
     MatSnackBarModule,
-   /* schemas: [
-      CUSTOM_ELEMENTS_SCHEMA,
-      NO_ERRORS_SCHEMA
-    ]
-    */
+    CommonModule,
+    ComponentModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

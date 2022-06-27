@@ -16,12 +16,13 @@ export class ListarMascotasComponent implements OnInit {
 
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component,NgModule, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 //import { DialogoConfirmacionComponent } from "../dialogo-confirmacion/dialogo-confirmacion.component"
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Mascota, Prueba } from 'src/app/component/interface/interface';
 import { MascotasService } from 'src/app/component/service/mascotas.service';
+import { DialogoConfirmacionComponent } from '../dialogo-confirmacion/dialogo-confirmacion.component';
 
 
 @Component({
@@ -29,13 +30,15 @@ import { MascotasService } from 'src/app/component/service/mascotas.service';
   templateUrl: './listar-mascotas.component.html',
   styleUrls: ['./listar-mascotas.component.css'],
   //imports:[HttpClientModule  ]
-  providers: [Component, MascotasService, CommonModule]
+  providers: [Component, MascotasService, CommonModule],
+
   
 })
 export class ListarMascotasComponent implements OnInit {
   public mascotas : Mascota[] = [];
   //prueb: Prueba= {}
   hola = "hola"
+  
  /* private mascotas: Mascota[] = [
     new Mascota("Maggie", "Chihuahua", 20)
   ];
@@ -45,13 +48,14 @@ export class ListarMascotasComponent implements OnInit {
     private dialogo: MatDialog, 
     private snackBar: MatSnackBar) { }
 
-  /*eliminarMascota(mascota: Mascota) {
+  eliminarMascota(mascota: Mascota) {
     this.dialogo
       .open(DialogoConfirmacionComponent, {
         data: `¿Realmente quieres eliminar a ${mascota.nombre}?`
       })
       .afterClosed()
       .subscribe((confirmado: Boolean) => {
+        //console.log('aca :', confirmado)
         if (!confirmado) return;
         this.mascotasService
           .deleteMascota(mascota)
@@ -62,7 +66,7 @@ export class ListarMascotasComponent implements OnInit {
             });
           });
       })
-  }*/
+  }
 
   ngOnInit() {
     this.obtenerMascotas();
