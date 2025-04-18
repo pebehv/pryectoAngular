@@ -1,4 +1,4 @@
-##PryectoAngular
+#PryectoAngular
 
 Este fue uno de mis primeros proyectos prácticos en Angular. Formó parte del curso de "Desarrollo de páginas con Angular" que realicé en Coursera. En este proyecto, utilicé Angular junto con una conexión a un servicio en PHP.
 
