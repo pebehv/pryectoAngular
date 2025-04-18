@@ -8,6 +8,7 @@ import { MascotaComponent } from './component/component/mascota/mascota.componen
 
 const routes: Routes = [
 
+  {path:"", component:LoginComponent},
   {path:"login", component:LoginComponent},
   { path: "mascotas", component: ListarMascotasComponent },
   { path: "mascota", component: MascotaComponent },
