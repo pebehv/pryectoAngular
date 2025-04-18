@@ -73,13 +73,27 @@ export class ListarMascotasComponent implements OnInit {
   }
 
   obtenerMascotas() {
-    return this.mascotasService
+    console.log("obtenerMascotas")
+    /*return this.mascotasService
       .getMascotas()
       .subscribe((mascotas: Mascota[]) =>
        {
-          this.mascotas = mascotas ;
+          //this.mascotas = mascotas ;
+          this.mascotas = [{
+            nombre: 'mascota1',
+            raza:'raza1',
+            edad: 1
+
+          }] ;
           console.log('en lista: ', this.mascotas, this.mascotas[0].nombre) }
-      );
+      );*/
+      this.mascotas = [{
+        nombre: 'mascota1',
+        raza:'raza1',
+        edad: 1
+
+      }] ;
+      console.log('en lista: ', this.mascotas, this.mascotas[0].nombre) 
       
   }
 
